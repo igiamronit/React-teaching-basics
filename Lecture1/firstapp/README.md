@@ -1,4 +1,5 @@
 ### Lecture 1
+---
 
 ### Step 1: 
 * Create a new directory for your app
@@ -66,3 +67,37 @@ function App() {
 }
 export default App;
 ```
+
+---
+### Props
+* Create a new file in `src/components` directory named `ProjectCard.js`.
+```jsx
+function ProjectCard({ title, description }) {
+  return (
+    <div style={{ border: "1px solid #ccc", padding: "1rem", margin: "1rem" }}>
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+  );
+}
+export default ProjectCard;
+```
+### Step 6: Use the ProjectCard component in App.js
+* Modify `App.js` to import and use the `ProjectCard` component:
+```jsx
+import Navbar from './components/Navbar';
+import ProjectCard from './components/ProjectCard';
+import ProjectCard from "./components/ProjectCard";
+
+function App() {
+  return (
+    <div>
+      <h1>Projects</h1>
+      <ProjectCard title="Portfolio Site" description="A React-based portfolio site" />
+      <ProjectCard title="ToDo App" description="A simple task manager using React" />
+    </div>
+  );
+}
+```
+
+---
