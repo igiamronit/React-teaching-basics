@@ -34,3 +34,35 @@ export default App;
 npm start
 ```
 * Open your browser and go to `http://localhost:3000` to see your app in action.
+
+---
+
+### Functional Components
+### Step 4: Create a functional component
+* Create a new file in `src/components` directory named `Navbar.js`.
+```jsx
+function Navbar() {
+  return (
+    <nav style={{ padding: "1rem", background: "#eee" }}>
+      <h2>My Portfolio</h2>
+    </nav>
+  );
+}
+
+export default Navbar;
+```
+### Step 5: Use the Navbar component in App.js
+* Modify `App.js` to import and use the `Navbar` component:
+```jsx
+import Navbar from './components/Navbar';
+function App() {
+  const name = "Ronit";
+  return (
+    <div>
+      <Navbar />
+      <h1>Hello, {name}!</h1>
+    </div>
+  );
+}
+export default App;
+```
