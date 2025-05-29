@@ -1,21 +1,29 @@
-### Lecture 1
+# Lecture 1 – React Basics: JSX, Components, and Portfolio Layout
+
+This lecture covers JSX, components, props, and setting up the structure of a basic portfolio website.
+
 ---
 
-### Step 1: 
-* Create a new directory for your app
-* Navigate into the directory.
-```bash
-mkdir firstapp
-cd firstapp
-```
-* use `npx create-react-app .` to create a new React app in the current directory.
-```bash
-npx create-react-app .
-```
-* clear the boiler code.
+### Step 1: Create a React App
 
-### Step 2: Write your first .jsx code
-* Change app.js to the following code:
+1. Open terminal and run:
+
+    ```bash
+    mkdir firstapp
+    cd firstapp
+    npx create-react-app .
+    ```
+
+2. Once setup is complete, remove boilerplate:
+    - Delete: `App.css`, `logo.svg`, `reportWebVitals.js`, `setupTests.js`
+    - Clean `App.js` and `index.js` for a fresh start
+
+---
+
+### Step 2: Write Your First JSX
+
+Edit `src/App.js` with the following:
+
 ```jsx
 function App() {
   const name = "Ronit";
@@ -29,18 +37,29 @@ function App() {
 
 export default App;
 ```
-### Step 3: Run your app
-* Start the development server by running:
-```bash
-npm start
-```
-* Open your browser and go to `http://localhost:3000` to see your app in action.
 
 ---
 
-### Functional Components
-### Step 4: Create a functional component
-* Create a new file in `src/components` directory named `Navbar.js`.
+### Step 3: Run the App
+
+Start the development server:
+
+```bash
+npm start
+```
+
+Open your browser and visit:
+
+```
+http://localhost:3000
+```
+
+---
+
+### Step 4: Create a Functional Component
+
+Create `src/components/Navbar.js`:
+
 ```jsx
 function Navbar() {
   return (
@@ -52,10 +71,16 @@ function Navbar() {
 
 export default Navbar;
 ```
-### Step 5: Use the Navbar component in App.js
-* Modify `App.js` to import and use the `Navbar` component:
+
+---
+
+### Step 5: Use Navbar in App
+
+Edit `src/App.js`:
+
 ```jsx
 import Navbar from './components/Navbar';
+
 function App() {
   const name = "Ronit";
   return (
@@ -65,12 +90,16 @@ function App() {
     </div>
   );
 }
+
 export default App;
 ```
 
 ---
-### Props
-* Create a new file in `src/components` directory named `ProjectCard.js`.
+
+### Step 6: Props with ProjectCard
+
+Create `src/components/ProjectCard.js`:
+
 ```jsx
 function ProjectCard({ title, description }) {
   return (
@@ -80,24 +109,104 @@ function ProjectCard({ title, description }) {
     </div>
   );
 }
+
 export default ProjectCard;
 ```
-### Step 6: Use the ProjectCard component in App.js
-* Modify `App.js` to import and use the `ProjectCard` component:
+
+Use in `App.js`:
+
 ```jsx
 import Navbar from './components/Navbar';
 import ProjectCard from './components/ProjectCard';
-import ProjectCard from "./components/ProjectCard";
 
 function App() {
   return (
     <div>
+      <Navbar />
       <h1>Projects</h1>
       <ProjectCard title="Portfolio Site" description="A React-based portfolio site" />
       <ProjectCard title="ToDo App" description="A simple task manager using React" />
     </div>
   );
 }
+
+export default App;
+```
+
+---
+
+### Step 7: Add Static Sections (Hero, About, Footer)
+
+Create `src/components/Hero.js`:
+
+```jsx
+function Hero() {
+  return (
+    <section>
+      <h1>Hello, I’m Ronit 👋</h1>
+      <p>I'm a Web Developer passionate about building beautiful UIs.</p>
+    </section>
+  );
+}
+
+export default Hero;
+```
+
+Create `src/components/About.js`:
+
+```jsx
+function About() {
+  return (
+    <section>
+      <h2>About Me</h2>
+      <p>I love coding, design, and building cool stuff.</p>
+    </section>
+  );
+}
+
+export default About;
+```
+
+Create `src/components/Footer.js`:
+
+```jsx
+function Footer() {
+  return (
+    <footer>
+      <p>© 2025 Ronit. All rights reserved.</p>
+    </footer>
+  );
+}
+
+export default Footer;
+```
+
+---
+
+### Step 8: Final App.js
+
+```jsx
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import ProjectCard from './components/ProjectCard';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div>
+      <Navbar />
+      <Hero />
+      <About />
+      <h2>Projects</h2>
+      <ProjectCard title="Portfolio Site" description="A React-based portfolio site" />
+      <ProjectCard title="ToDo App" description="A simple task manager using React" />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
 ```
 
 ---
