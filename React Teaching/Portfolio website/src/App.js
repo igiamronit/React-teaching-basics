@@ -14,27 +14,23 @@ function App() {
 
   const toggleTheme = () => setDarkMode(!darkMode);
 
-  const appStyle = {
-    backgroundColor: darkMode ? "#333" : "#fff",
-    color: darkMode ? "#fff" : "#000",
-    minHeight: "100vh",
-    transition: "all 0.3s ease"
-  };
   return (
-    <div style={appStyle}>
+    <div className={`app-container ${darkMode ? 'dark' : 'light'}`}>
       <ThemeToggler darkMode={darkMode} toggleTheme={toggleTheme} />
-      <div className="App">
-        <Navbar/>
-        <h1>Projects</h1>
-        <ProjectCard title="Portfolio Site" description="A React-based portfolio site" />
-        <ProjectCard title="ToDo App" description="A simple task manager using React" />
-        <About />
+      <div className="main-content">
+        <Navbar />
         <Hero />
+        <About />
+        <div className="projects-section">
+          <h1>Projects</h1>
+          <div className="projects-grid">
+            <ProjectCard title="Portfolio Site" description="A React-based portfolio site" />
+            <ProjectCard title="ToDo App" description="A simple task manager using React" />
+          </div>
+        </div>
         <Footer />
       </div>
     </div>
-    
-
   );
 }
 

@@ -1,7 +1,7 @@
 function Hero() {
   return (
-    <section>
-      <h1>Hello, I’m Ronit 👋</h1>
+    <section className="hero-section">
+      <h1>Hello, I'm Ronit 👋</h1>
       <p>I'm a Web Developer passionate about building beautiful UIs.</p>
     </section>
   );

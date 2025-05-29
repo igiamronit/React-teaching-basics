@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <p>© 2025 Ronit. All rights reserved.</p>
     </footer>
   );

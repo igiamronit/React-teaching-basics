@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav style={{ padding: "1rem"}}>
+    <nav className="navbar">
       <h2>My Portfolio</h2>
     </nav>
   );

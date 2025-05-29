@@ -1,3 +1,7 @@
+Hey there feel free to use this as a reference for your portfolio website. This is a simple portfolio website built using React. It covers the basics of React including JSX, components, props, and state management.
+
+(![Portfolio Website](public/demo.png))
+
 # Lecture 1 – React Basics: JSX, Components, and Portfolio Layout
 
 This lecture covers JSX, components, props, and setting up the structure of a basic portfolio website.
@@ -208,7 +212,7 @@ function App() {
 
 export default App;
 ```
-
+# Lecture 2: 
 ---
 ### Step 9: Add Dark Mode Toggle
 
@@ -279,3 +283,10 @@ function App() {
 export default App;
 ```
 ---
+
+### Task!
+Modify about me such that it shows less information and add a button to show more information. When the button is clicked, it should show more information about you.
+
+### Final: Add some CSS
+As this lecture is not about CSS, you can add some basic styles to make your portfolio look better. You can create a `src/App.css` file and import it in `App.js`.
+
